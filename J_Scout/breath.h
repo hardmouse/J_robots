@@ -1,0 +1,29 @@
+void breath() {
+  myssc.beginGroupCommand(SSC32_CMDGRP_TYPE_SERVO_MOVEMENT);
+  myssc.servoMoveTime(23,dePos_L[2]+100,actSpeed);
+  myssc.servoMoveTime(24,dePos_L[3]+200,actSpeed);
+  myssc.servoMoveTime(25,dePos_L[4]+100,actSpeed);
+  myssc.servoMoveTime(28,dePos_L[6]-30,actSpeed);
+  myssc.servoMoveTime(29,dePos_L[7]-40,actSpeed);
+  myssc.servoMoveTime(7,dePos_R[2]-100,actSpeed);
+  myssc.servoMoveTime(8,dePos_R[3]-200,actSpeed);
+  myssc.servoMoveTime(9,dePos_R[4]-100,actSpeed);
+  myssc.servoMoveTime(12,dePos_R[6]+30,actSpeed);
+  myssc.servoMoveTime(13,dePos_R[7]+40,actSpeed);
+  myssc.endGroupCommand();
+  delay(actSpeed);
+  
+  myssc.beginGroupCommand(SSC32_CMDGRP_TYPE_SERVO_MOVEMENT);
+  myssc.servoMoveTime(23,dePos_L[2],actSpeed);
+  myssc.servoMoveTime(24,dePos_L[3],actSpeed);
+  myssc.servoMoveTime(25,dePos_L[4],actSpeed);
+  myssc.servoMoveTime(28,dePos_L[6]+30,actSpeed);
+  myssc.servoMoveTime(29,dePos_L[7]+40,actSpeed);
+  myssc.servoMoveTime(7,dePos_R[2],actSpeed);
+  myssc.servoMoveTime(8,dePos_R[3],actSpeed);
+  myssc.servoMoveTime(9,dePos_R[4],actSpeed);
+  myssc.servoMoveTime(12,dePos_R[6]-30,actSpeed);
+  myssc.servoMoveTime(13,dePos_R[7]-40,actSpeed);
+  myssc.endGroupCommand();
+  delay(actSpeed);
+}
